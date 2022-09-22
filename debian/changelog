@@ -1,0 +1,53 @@
+node-constants-browserify (1.0.0+dfsg-6.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 01:38:52 +0100
+
+node-constants-browserify (1.0.0+dfsg-6) unstable; urgency=medium
+
+  * Team upload
+  * Bump compat and policy (no changes)
+  * Move to salsa
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 14 May 2018 14:50:01 +0200
+
+node-constants-browserify (1.0.0+dfsg-5) unstable; urgency=high
+
+  * Team upload
+  * Bug fix: "updating nodejs breaks node-constants-browserify", thanks to
+    Pirate Praveen (Closes: #878006).
+
+ -- Bastien Roucariès <rouca@debian.org>  Thu, 09 Nov 2017 11:19:57 +0100
+
+node-constants-browserify (1.0.0+dfsg-4) unstable; urgency=medium
+
+  * Team upload
+  * Be paranoiac about umask in postinst. Set it to 022.
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 21 Aug 2017 13:45:19 +0200
+
+node-constants-browserify (1.0.0+dfsg-3) unstable; urgency=medium
+
+  * Team upload
+  * Improve postrm
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 20 Aug 2017 22:27:09 +0200
+
+node-constants-browserify (1.0.0+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkgtest by rebuilding constant list using a trigger on
+    /usr/bin/node
+  * Use Akash Sarda instead of akash for debian uploader.
+  * Improve debian packaging
+  * Bump compat and policy
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 20 Aug 2017 16:33:16 +0200
+
+node-constants-browserify (1.0.0+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #854037)
+
+ -- Akash Sarda <akashsarda3@gmail.com>  Fri, 03 Feb 2017 10:22:25 +0000

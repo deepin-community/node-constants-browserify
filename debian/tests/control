@@ -1,5 +1,0 @@
-Tests: require
-Depends: node-constants-browserify
-
-Tests: runtestsuite
-Depends: node-constants-browserify

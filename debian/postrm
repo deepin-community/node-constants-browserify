@@ -2,18 +2,18 @@
 
 set -e
 
-CONSTANTS_FILE="$DPKG_ROOT/usr/lib/nodejs/constants-browserify/constants.json"
+CONSTANTS_FILE="${DPKG_ROOT:-}/usr/share/nodejs/constants-browserify/constants.json"
 
 case "$1" in
-  remove)
-    rm -f "$CONSTANTS_FILE"
-  ;;
-  purge|upgrade|failed-upgrade|abort-upgrade|abort-install)
-  ;;
-  *)
-    echo "postrm called with unknown argument \`$1'" >&2
-    exit 1
-  ;;
+	remove)
+		rm -f "$CONSTANTS_FILE"
+		;;
+	purge|upgrade|failed-upgrade|abort-upgrade|abort-install)
+		;;
+	*)
+		echo "postrm called with unknown argument \`$1'" >&2
+		exit 1
+	;;
 esac
 
 

@@ -7,22 +7,11 @@
 %:
 	dh $@
 
-override_dh_auto_build:
-	dh_auto_build
-	# build for smoke test not used see install
-	node -pe 'JSON.stringify(require("constants"), null, "  ")' > constants.json
-
 override_dh_auto_install:
-	dh_auto_install
+	dh_auto_install --buildsystem=nodejs
 	# this file is trigger created
-	! test -f debian/node-constants-browserify/usr/lib/nodejs/constants-browserify/constants.json
+	! test -f debian/node-constants-browserify/usr/share/nodejs/constants-browserify/constants.json
 
-override_dh_auto_test:
-ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS) $(DEB_BUILD_PROFILES)))
-	dh_auto_test
-	node test.js
-else
-	@echo '**********************************************************'
-	@echo 'Skip test suite                                           '
-	@echo '**********************************************************'
-endif
+override_dh_fixperms:
+	dh_fixperms
+	chmod -x debian/node-constants-browserify/usr/share/nodejs/constants-browserify/build.sh

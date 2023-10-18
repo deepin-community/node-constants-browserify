@@ -1,9 +1,36 @@
-node-constants-browserify (1.0.0+dfsg-6.1) unstable; urgency=medium
+node-constants-browserify (1.0.0+dfsg-8) unstable; urgency=medium
 
-  * Non maintainer upload by the Reproducible Builds team.
-  * No source change upload to rebuild on buildd with .buildinfo files.
+  * Team upload
+  * Restore dependency to nodejs due to postinst trigger (now nodejs:any)
+  * Fix use of DPKG_ROOT (Closes: #909232)
+  * Purge old constants.json file (in /usr/lib/nodejs)
 
- -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 01:38:52 +0100
+ -- Yadd <yadd@debian.org>  Sat, 15 Jan 2022 08:01:50 +0100
+
+node-constants-browserify (1.0.0+dfsg-7) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Remove constraints unnecessary since stretch:
+    + node-constants-browserify: Drop versioned constraint on dpkg in
+      Pre-Depends.
+  * Bump debhelper from old 11 to 13.
+  * Set debhelper-compat version in Build-Depends.
+
+  [ Yadd ]
+  * Add missing build dependency on dh addon.
+  * Update standards version to 4.6.0, no changes needed.
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Fix filenamemangle
+  * Fix GitHub tags regex
+  * Drop dependency to nodejs
+  * Use dh-sequence-nodejs auto test & install
+
+ -- Yadd <yadd@debian.org>  Mon, 03 Jan 2022 18:04:45 +0100
 
 node-constants-browserify (1.0.0+dfsg-6) unstable; urgency=medium
 

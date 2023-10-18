@@ -1,0 +1,3 @@
+test -e constants.json || node -pe 'JSON.stringify(require("constants"), null, "  ")' > constants.json
+node test.js
+rm -f constants.json

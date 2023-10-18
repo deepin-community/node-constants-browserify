@@ -3,5 +3,5 @@ opts=\
 repacksuffix=+dfsg,\
 repack,compression=xz,\
 dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-constants-browserify-$1.tar.gz/ \
- https://github.com/juliangruber/constants-browserify/tags .*/archive/v?([\d\.]+).tar.gz
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-constants-browserify-$1/ \
+ https://github.com/juliangruber/constants-browserify/tags .*/archive/.*/v?([\d\.]+).tar.gz
